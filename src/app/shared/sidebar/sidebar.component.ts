@@ -11,7 +11,11 @@ export class SidebarComponent {
   get historial() {
     return this.gifsService.historial
   }
-  constructor(private gifsService: GifsService) {
+  constructor(private gifsService: GifsService) { }
+
+  //para mostrar las imagenes guardadas en el localStorage en el navegador
+  buscar(termino: string) {
+    this.gifsService.buscarGifs(termino);
 
   }
 }
